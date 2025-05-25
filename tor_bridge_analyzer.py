@@ -72,26 +72,56 @@ class TorBridgeAnalyzer:
             logger.info(f"使用代理: {self.proxy_url}")
         return session
     
+    def _find_mmdb_file(self, db_type):
+        """查找MMDB文件，支持多种命名格式"""
+        possible_names = []
+        
+        if db_type == 'asn':
+            possible_names = [
+                'GeoLite2-ASN.mmdb',
+                'GeoLite2-Asn.mmdb',
+                'geolite2-asn.mmdb'
+            ]
+        elif db_type == 'country':
+            possible_names = [
+                'GeoLite2-COUNTRY.mmdb',  # 全大写
+                'GeoLite2-Country.mmdb',  # 首字母大写
+                'GeoLite2-country.mmdb',  # 全小写
+                'geolite2-country.mmdb'   # 全小写带连字符
+            ]
+        
+        for name in possible_names:
+            filepath = self.mmdb_dir / name
+            if filepath.exists():
+                logger.info(f"找到 {db_type} 数据库文件: {filepath}")
+                return filepath
+        
+        logger.warning(f"未找到 {db_type} 数据库文件，尝试的文件名: {possible_names}")
+        return None
+    
     def _get_mmdb_readers(self):
         """获取线程本地的MMDB readers"""
         if not hasattr(self._local, 'asn_reader'):
-            asn_db_path = self.mmdb_dir / "GeoLite2-ASN.mmdb"
-            country_db_path = self.mmdb_dir / "GeoLite2-Country.mmdb"
-            
             self._local.asn_reader = None
             self._local.country_reader = None
             
-            if asn_db_path.exists():
+            # 查找ASN数据库文件
+            asn_db_path = self._find_mmdb_file('asn')
+            if asn_db_path:
                 try:
                     self._local.asn_reader = geoip2.database.Reader(str(asn_db_path))
+                    logger.debug(f"成功打开ASN数据库: {asn_db_path}")
                 except Exception as e:
-                    logger.error(f"无法打开ASN数据库: {e}")
+                    logger.error(f"无法打开ASN数据库 {asn_db_path}: {e}")
             
-            if country_db_path.exists():
+            # 查找Country数据库文件
+            country_db_path = self._find_mmdb_file('country')
+            if country_db_path:
                 try:
                     self._local.country_reader = geoip2.database.Reader(str(country_db_path))
+                    logger.debug(f"成功打开Country数据库: {country_db_path}")
                 except Exception as e:
-                    logger.error(f"无法打开Country数据库: {e}")
+                    logger.error(f"无法打开Country数据库 {country_db_path}: {e}")
         
         return self._local.asn_reader, self._local.country_reader
     
@@ -119,11 +149,19 @@ class TorBridgeAnalyzer:
     def download_mmdb_files(self):
         """下载MMDB文件"""
         for name, url in self.mmdb_urls.items():
-            filepath = self.mmdb_dir / f"GeoLite2-{name.upper()}.mmdb"
-            if not filepath.exists():
-                self.download_file(url, filepath)
-            else:
-                logger.info(f"MMDB文件已存在: {filepath}")
+            # 检查是否已存在任何格式的文件
+            existing_file = self._find_mmdb_file(name)
+            if existing_file:
+                logger.info(f"MMDB文件已存在: {existing_file}")
+                continue
+            
+            # 下载时使用标准命名（首字母大写）
+            if name == 'asn':
+                filepath = self.mmdb_dir / "GeoLite2-ASN.mmdb"
+            elif name == 'country':
+                filepath = self.mmdb_dir / "GeoLite2-Country.mmdb"
+            
+            self.download_file(url, filepath)
     
     def download_bridge_files(self):
         """下载Tor Bridges文件"""
@@ -321,6 +359,20 @@ class TorBridgeAnalyzer:
             return []
         
         logger.info("开始分析网桥信息...")
+        
+        # 检查MMDB文件是否可用
+        asn_file = self._find_mmdb_file('asn')
+        country_file = self._find_mmdb_file('country')
+        
+        if not asn_file and not country_file:
+            logger.error("未找到任何MMDB数据库文件！")
+            return []
+        
+        if not asn_file:
+            logger.warning("未找到ASN数据库文件，将跳过ASN信息查询")
+        
+        if not country_file:
+            logger.warning("未找到Country数据库文件，将跳过国家信息查询")
         
         # 创建IP到类型的映射
         ip_to_type = {bridge['ip']: bridge['type'] for bridge in bridges}
