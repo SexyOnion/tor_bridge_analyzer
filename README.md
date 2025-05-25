@@ -1,0 +1,49 @@
+# Tor网桥分析脚本
+
+## 关于
+
+本项目始于仰止社区的一次讨论，我在这个帖子[“寻找中共运营的Tor网桥”](https://web.archive.org/web/20250525101003/https://yangzhi.org/)中初次构想了本脚本。
+
+我编写该脚本后发现有惊人数量的Tor网桥来自中国，具体数字是26483个中国网桥，这些网桥几乎一定都是中共设立的钓鱼网桥，很多IP可能都是防外线，而且有来自奇虎360公司的IP。相关数据在本项目的example目录中，文件均为json格式。
+
+## 功能
+
+本项目包含一个Python脚本，运行这个脚本将会下载最新版本的GeoLite数据库，并且会下载最新获取到的Tor网桥列表。然后，脚本将会通过GeoLite数据库解析Tor网桥的ASN、国家等信息。
+
+## 数据来源
+
+MaxMind GeoLite2：https://github.com/P3TERX/GeoLite.mmdb/
+
+Tor-Bridges-Collector：https://github.com/scriptzteam/Tor-Bridges-Collector
+
+## 使用教程
+
+1. 把这个Repo Clone到本地。
+2. cd进项目目录
+3. 创建虚拟环境: ```python3 -m venv myenv```
+4. 激活虚拟环境: WIndows系统执行:```myenv\Scripts\activate``` Mac/Linux执行:```source myenv/bin/activate```
+5. 安装依赖：```pip install -r requirements.txt```
+6. 在项目目录创建.env文件，按照你的需求修改：
+
+```env
+# 是否使用代理下载文件 (true/false)
+USE_PROXY=true
+
+# 代理URL (仅当USE_PROXY=true时生效)
+# 支持HTTP和SOCKS代理
+# 示例:
+# HTTP代理: http://127.0.0.1:8080
+# SOCKS5代理: socks5://127.0.0.1:1080
+PROXY_URL=
+
+# 并发处理线程数 (建议1-20)
+MAX_WORKERS=15
+
+# 其他可选配置
+# HTTP请求超时时间(秒)
+REQUEST_TIMEOUT=30
+
+# 日志级别 (DEBUG, INFO, WARNING, ERROR)
+LOG_LEVEL=INFO
+```
+7. 运行```python tor_bridge_analyzer.py```

@@ -1,0 +1,1754 @@
+[
+  {
+    "ip": "82.157.78.27",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.156.229.191",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "vanilla"
+  },
+  {
+    "ip": "47.243.74.136",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "vanilla"
+  },
+  {
+    "ip": "119.8.26.170",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.91.140.13",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.91.203.194",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.91.252.157",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.28.105.149",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.3.119.18",
+    "asn": 55990,
+    "as_org": "Huawei Cloud Service data center",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.68.21",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.68.22",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.68.59",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.69.71",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.69.73",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.72.103",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.72.105",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "119.13.72.106",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "118.89.63.248",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "49.51.133.115",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "49.51.133.90",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "49.51.136.69",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "129.226.170.236",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "43.129.213.76",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.131.33.125",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.131.38.244",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.131.62.185",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.134.199.91",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.134.213.233",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.135.159.92",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "United States",
+    "country_code": "US",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.136.19.110",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.136.70.73",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.136.79.196",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.139.26.113",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.143.184.241",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.143.195.250",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.143.48.64",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.153.110.175",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "United States",
+    "country_code": "US",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.153.4.208",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "United States",
+    "country_code": "US",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.153.86.143",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "United States",
+    "country_code": "US",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.153.98.54",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "United States",
+    "country_code": "US",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.154.10.185",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.154.12.157",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.154.166.168",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.154.182.82",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.155.116.53",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.156.18.60",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.156.187.244",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.157.122.152",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.157.60.71",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "43.159.33.103",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "42.201.201.17",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "42.201.201.5",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "114.132.240.142",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.91.93.167",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.94.84.126",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.97.214.219",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.75.78.161",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.87.147.180",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.87.152.142",
+    "asn": 134963,
+    "as_org": "Alibaba Cloud Singapore Private Limited",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.87.164.97",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.87.168.165",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.87.179.81",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.87.192.119",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Japan",
+    "country_code": "JP",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.87.230.4",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Australia",
+    "country_code": "AU",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.57.0.234",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.57.12.48",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.57.138.103",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.57.139.250",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.57.181.126",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.57.189.197",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.57.6.212",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.241.31.242",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.241.63.20",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.242.0.10",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.242.1.160",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.242.151.173",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.242.167.107",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.242.167.108",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.242.201.220",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.242.65.80",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.243.131.166",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.243.185.128",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.243.187.171",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.254.130.23",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.254.192.234",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Malaysia",
+    "country_code": "MY",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.100.173.155",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.108.180.169",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "47.108.188.102",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.208.215",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Saudi Arabia",
+    "country_code": "SA",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.213.162",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Saudi Arabia",
+    "country_code": "SA",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "39.103.174.75",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "111.230.103.98",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "111.230.192.233",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "111.230.9.69",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "111.230.91.70",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "111.119.213.60",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "110.238.90.23",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Mexico",
+    "country_code": "MX",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "46.250.171.41",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Mexico",
+    "country_code": "MX",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "129.226.203.185",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "150.158.188.238",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "124.220.179.74",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "124.221.113.205",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "124.222.107.41",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "124.222.113.117",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "124.223.180.169",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "124.156.108.193",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "123.56.178.111",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "123.207.43.180",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "122.8.190.242",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Mexico",
+    "country_code": "MX",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.55.187.139",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.55.3.5",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.55.42.32",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "121.4.110.90",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "121.40.88.187",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "121.41.122.252",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "120.79.205.27",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "120.26.49.216",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.11.31.15",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.11.31.30",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.11.31.7",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.11.31.8",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.11.34.46",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "106.11.41.195",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.170.173",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Mexico",
+    "country_code": "MX",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.171.135",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Mexico",
+    "country_code": "MX",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.171.34",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Mexico",
+    "country_code": "MX",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.172.115",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.172.176",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "80.238.173.67",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "103.7.29.102",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "101.35.234.72",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "101.42.229.182",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "101.42.234.146",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "101.44.81.189",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "1.15.47.63",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "1.117.85.172",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "27.106.64.111",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.130.52.85",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.208.11.128",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.209.241.25",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Japan",
+    "country_code": "JP",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.209.245.117",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Japan",
+    "country_code": "JP",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.1.236",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.104.101",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.118.196",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.152.173",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.160.47",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.172.235",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.174.239",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.253.102",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.70.156",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.87.130",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.210.91.195",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.211.52.97",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.1.158",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.2.20",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.21.156",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.43.17",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.43.76",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.45.159",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.45.217",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.46.44",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.51.104",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.53.122",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.212.8.56",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.216.41.36",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Japan",
+    "country_code": "JP",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.218.225.146",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.218.25.245",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.219.94.77",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.222.133.18",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.222.203.225",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "8.218.192.231",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "8.222.173.127",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "43.132.246.69",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "43.156.101.147",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "47.87.168.119",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "47.242.55.80",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "47.250.14.237",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Malaysia",
+    "country_code": "MY",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "47.250.187.82",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Malaysia",
+    "country_code": "MY",
+    "bridge_type": "obfs4"
+  },
+  {
+    "ip": "162.62.57.170",
+    "asn": 132203,
+    "as_org": "Tencent Building, Kejizhongyi Avenue",
+    "country": "Germany",
+    "country_code": "DE",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "81.68.140.224",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "81.71.157.197",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "81.71.24.111",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "161.117.255.234",
+    "asn": 45102,
+    "as_org": "Alibaba US Technology Co., Ltd.",
+    "country": "Singapore",
+    "country_code": "SG",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.34.56",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.36.10",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.36.229",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.37.119",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.38.145",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.38.63",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.39.140",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.39.159",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.41.239",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.41.70",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.43.43",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.45.185",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.45.249",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.50.178",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.52.239",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.56.48",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.58.150",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.61.247",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.61.55",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.62.43",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.146.178",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.32.104",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.32.243",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.33.118",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "159.138.34.134",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "152.136.60.243",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "190.92.231.32",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "190.92.245.4",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "175.178.219.199",
+    "asn": 45090,
+    "as_org": "Shenzhen Tencent Computer Systems Company Limited",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "2408:4005:3f0:b600:c05c:62c4:a678:91f5",
+    "asn": 37963,
+    "as_org": "Hangzhou Alibaba Advertising Co.,Ltd.",
+    "country": "China",
+    "country_code": "CN",
+    "bridge_type": "snowflake-ipv6"
+  },
+  {
+    "ip": "183.87.41.71",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "183.87.41.79",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "183.87.41.91",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "94.244.148.142",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "94.244.173.38",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  },
+  {
+    "ip": "94.74.105.98",
+    "asn": 136907,
+    "as_org": "HUAWEI CLOUDS",
+    "country": "Hong Kong",
+    "country_code": "HK",
+    "bridge_type": "snowflake-ipv4"
+  }
+]

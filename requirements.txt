@@ -1,0 +1,7 @@
+requests
+geoip2
+python-dotenv
+rarfile
+ipaddress
+pathlib
+tqdm
