@@ -47,3 +47,9 @@ REQUEST_TIMEOUT=30
 LOG_LEVEL=INFO
 ```
 7. 运行```python tor_bridge_analyzer.py```
+
+## 仓库镜像
+
+仓库的主要地址在GitHub：https://github.com/SexyOnion/tor_bridge_analyzer
+
+考虑到中国政府对GitHub的限制，以及GitHub平台自身对文件大小的限制，本仓库在Gitea有镜像：https://gitea.com/Xijinping/tor_bridge_analyzer
