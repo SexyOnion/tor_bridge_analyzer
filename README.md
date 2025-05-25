@@ -23,7 +23,8 @@ Tor-Bridges-Collector：https://github.com/scriptzteam/Tor-Bridges-Collector
 3. 创建虚拟环境: ```python3 -m venv myenv```
 4. 激活虚拟环境: WIndows系统执行:```myenv\Scripts\activate``` Mac/Linux执行:```source myenv/bin/activate```
 5. 安装依赖：```pip install -r requirements.txt```
-6. 在项目目录创建.env文件，按照你的需求修改：
+6. Linux系统执行以下命令安装unrar ```sudo apt install unrar``` MacOS系统执行：```brew install carlocab/personal/unrar``` 如果没有安装unrar会造成解压错误
+7. 在项目目录创建.env文件，按照你的需求修改：
 
 ```env
 # 是否使用代理下载文件 (true/false)
@@ -46,7 +47,7 @@ REQUEST_TIMEOUT=30
 # 日志级别 (DEBUG, INFO, WARNING, ERROR)
 LOG_LEVEL=INFO
 ```
-7. 运行```python tor_bridge_analyzer.py```
+8. 运行```python tor_bridge_analyzer.py```
 
 ## 仓库镜像
 
