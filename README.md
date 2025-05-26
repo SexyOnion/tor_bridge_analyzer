@@ -6,7 +6,7 @@
 
 This project originated from a discussion in the Yangzhi community, where I first conceived this script in the post ["Looking for Tor Bridges Operated by the CCP"](https://yangzhi.org/question/6783/).
 
-After writing this script, I discovered a staggering number of Tor bridges from China - specifically 26,483 Chinese bridges. These bridges are almost certainly honeypot bridges set up by the CCP, with many IPs likely being part of the Great Firewall infrastructure, including IPs from Qihoo 360 company. The relevant data is in the example directory of this project, with all files in JSON format.
+After writing this script, I discovered a staggering number of Tor bridges from China - specifically 26,483 Chinese bridges. These bridges are almost certainly honeypot bridges set up by the CCP. The relevant data is in the example directory of this project, with all files in JSON format.
 
 ## Features
 
