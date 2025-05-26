@@ -18,10 +18,10 @@ from tqdm import tqdm
 import threading
 from functools import lru_cache
 
-# 加载环境变量
+# Load environment variables
 load_dotenv()
 
-# 配置日志
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -38,15 +38,15 @@ class TorBridgeAnalyzer:
         self.bridges_dir = Path("Bridges")
         self.use_proxy = os.getenv('USE_PROXY', 'false').lower() == 'true'
         self.proxy_url = os.getenv('PROXY_URL', '')
-        self.max_workers = int(os.getenv('MAX_WORKERS', '10'))  # 并发线程数
+        self.max_workers = int(os.getenv('MAX_WORKERS', '10'))  # Number of concurrent threads
         
-        # MMDB文件URLs
+        # MMDB file URLs
         self.mmdb_urls = {
             'asn': 'https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb',
             'country': 'https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb'
         }
         
-        # Tor Bridges数据URLs
+        # Tor Bridges data URLs
         self.bridge_urls = {
             'obfs4': 'https://raw.githubusercontent.com/scriptzteam/Tor-Bridges-Collector/refs/heads/main/bridges-obfs4',
             'obfs4-ipv6': 'https://raw.githubusercontent.com/scriptzteam/Tor-Bridges-Collector/refs/heads/main/bridges-obfs4-ipv6',
@@ -58,22 +58,22 @@ class TorBridgeAnalyzer:
         
         self.session = self._create_session()
         
-        # 线程本地存储，用于MMDB reader
+        # Thread-local storage for MMDB readers
         self._local = threading.local()
         
     def _create_session(self):
-        """创建HTTP会话"""
+        """Create HTTP session"""
         session = requests.Session()
         if self.use_proxy and self.proxy_url:
             session.proxies = {
                 'http': self.proxy_url,
                 'https': self.proxy_url
             }
-            logger.info(f"使用代理: {self.proxy_url}")
+            logger.info(f"Using proxy: {self.proxy_url}")
         return session
     
     def _find_mmdb_file(self, db_type):
-        """查找MMDB文件，支持多种命名格式"""
+        """Find MMDB file, supporting multiple naming formats"""
         possible_names = []
         
         if db_type == 'asn':
@@ -84,78 +84,78 @@ class TorBridgeAnalyzer:
             ]
         elif db_type == 'country':
             possible_names = [
-                'GeoLite2-COUNTRY.mmdb',  # 全大写
-                'GeoLite2-Country.mmdb',  # 首字母大写
-                'GeoLite2-country.mmdb',  # 全小写
-                'geolite2-country.mmdb'   # 全小写带连字符
+                'GeoLite2-COUNTRY.mmdb',  # All uppercase
+                'GeoLite2-Country.mmdb',  # First letter uppercase
+                'GeoLite2-country.mmdb',  # All lowercase
+                'geolite2-country.mmdb'   # All lowercase with hyphen
             ]
         
         for name in possible_names:
             filepath = self.mmdb_dir / name
             if filepath.exists():
-                logger.info(f"找到 {db_type} 数据库文件: {filepath}")
+                logger.info(f"Found {db_type} database file: {filepath}")
                 return filepath
         
-        logger.warning(f"未找到 {db_type} 数据库文件，尝试的文件名: {possible_names}")
+        logger.warning(f"No {db_type} database file found, tried filenames: {possible_names}")
         return None
     
     def _get_mmdb_readers(self):
-        """获取线程本地的MMDB readers"""
+        """Get thread-local MMDB readers"""
         if not hasattr(self._local, 'asn_reader'):
             self._local.asn_reader = None
             self._local.country_reader = None
             
-            # 查找ASN数据库文件
+            # Find ASN database file
             asn_db_path = self._find_mmdb_file('asn')
             if asn_db_path:
                 try:
                     self._local.asn_reader = geoip2.database.Reader(str(asn_db_path))
-                    logger.debug(f"成功打开ASN数据库: {asn_db_path}")
+                    logger.debug(f"Successfully opened ASN database: {asn_db_path}")
                 except Exception as e:
-                    logger.error(f"无法打开ASN数据库 {asn_db_path}: {e}")
+                    logger.error(f"Unable to open ASN database {asn_db_path}: {e}")
             
-            # 查找Country数据库文件
+            # Find Country database file
             country_db_path = self._find_mmdb_file('country')
             if country_db_path:
                 try:
                     self._local.country_reader = geoip2.database.Reader(str(country_db_path))
-                    logger.debug(f"成功打开Country数据库: {country_db_path}")
+                    logger.debug(f"Successfully opened Country database: {country_db_path}")
                 except Exception as e:
-                    logger.error(f"无法打开Country数据库 {country_db_path}: {e}")
+                    logger.error(f"Unable to open Country database {country_db_path}: {e}")
         
         return self._local.asn_reader, self._local.country_reader
     
     def create_directories(self):
-        """创建必要的目录"""
+        """Create necessary directories"""
         self.mmdb_dir.mkdir(exist_ok=True)
         self.bridges_dir.mkdir(exist_ok=True)
-        logger.info("已创建MMDB和Bridges目录")
+        logger.info("Created MMDB and Bridges directories")
     
     def download_file(self, url, filepath):
-        """下载文件"""
+        """Download file"""
         try:
-            logger.info(f"正在下载: {url}")
+            logger.info(f"Downloading: {url}")
             response = self.session.get(url, timeout=30)
             response.raise_for_status()
             
             with open(filepath, 'wb') as f:
                 f.write(response.content)
-            logger.info(f"下载完成: {filepath}")
+            logger.info(f"Download completed: {filepath}")
             return True
         except Exception as e:
-            logger.error(f"下载失败 {url}: {e}")
+            logger.error(f"Download failed {url}: {e}")
             return False
     
     def download_mmdb_files(self):
-        """下载MMDB文件"""
+        """Download MMDB files"""
         for name, url in self.mmdb_urls.items():
-            # 检查是否已存在任何格式的文件
+            # Check if any format of the file already exists
             existing_file = self._find_mmdb_file(name)
             if existing_file:
-                logger.info(f"MMDB文件已存在: {existing_file}")
+                logger.info(f"MMDB file already exists: {existing_file}")
                 continue
             
-            # 下载时使用标准命名（首字母大写）
+            # Use standard naming when downloading (first letter uppercase)
             if name == 'asn':
                 filepath = self.mmdb_dir / "GeoLite2-ASN.mmdb"
             elif name == 'country':
@@ -164,7 +164,7 @@ class TorBridgeAnalyzer:
             self.download_file(url, filepath)
     
     def download_bridge_files(self):
-        """下载Tor Bridges文件"""
+        """Download Tor Bridges files"""
         for name, url in self.bridge_urls.items():
             if name.endswith('.rar') or url.endswith('.rar'):
                 filepath = self.bridges_dir / f"{name}.rar"
@@ -174,38 +174,38 @@ class TorBridgeAnalyzer:
             if not filepath.exists():
                 self.download_file(url, filepath)
             else:
-                logger.info(f"Bridges文件已存在: {filepath}")
+                logger.info(f"Bridges file already exists: {filepath}")
     
     def extract_rar_files(self):
-        """解压RAR文件"""
+        """Extract RAR files"""
         for rar_file in self.bridges_dir.glob("*.rar"):
             try:
-                logger.info(f"正在解压: {rar_file}")
+                logger.info(f"Extracting: {rar_file}")
                 with rarfile.RarFile(rar_file) as rf:
                     rf.extractall(self.bridges_dir)
-                logger.info(f"解压完成: {rar_file}")
+                logger.info(f"Extraction completed: {rar_file}")
             except Exception as e:
-                logger.error(f"解压失败 {rar_file}: {e}")
+                logger.error(f"Extraction failed {rar_file}: {e}")
     
     @lru_cache(maxsize=1024)
     def parse_ip_from_bridge_line(self, line, bridge_type):
-        """从网桥行中解析IP地址（带缓存）"""
+        """Parse IP address from bridge line (with cache)"""
         line = line.strip()
         if not line:
             return None
             
         try:
             if bridge_type in ['snowflake-ipv4', 'snowflake-ipv6']:
-                # Snowflake格式：直接是IP地址
+                # Snowflake format: direct IP address
                 ip = line.strip()
                 ipaddress.ip_address(ip)
                 return ip
             elif bridge_type in ['obfs4', 'obfs4-ipv6']:
-                # obfs4格式：obfs4 IP:PORT FINGERPRINT cert=... iat-mode=...
-                parts = line.split(None, 2)  # 只分割前3部分，提高性能
+                # obfs4 format: obfs4 IP:PORT FINGERPRINT cert=... iat-mode=...
+                parts = line.split(None, 2)  # Only split first 3 parts for performance
                 if len(parts) >= 2:
                     ip_port = parts[1]
-                    # 处理IPv6格式 [::]:port
+                    # Handle IPv6 format [::]:port
                     if ip_port.startswith('[') and ']:' in ip_port:
                         ip = ip_port.split(']:')[0][1:]
                     else:
@@ -213,16 +213,16 @@ class TorBridgeAnalyzer:
                     ipaddress.ip_address(ip)
                     return ip
             elif bridge_type == 'vanilla':
-                # vanilla格式：IP:PORT FINGERPRINT
-                parts = line.split(None, 1)  # 只分割第一个空格
+                # vanilla format: IP:PORT FINGERPRINT
+                parts = line.split(None, 1)  # Only split first space
                 if len(parts) >= 1:
                     ip_port = parts[0]
                     ip = ip_port.split(':')[0]
                     ipaddress.ip_address(ip)
                     return ip
             elif bridge_type == 'webtunnel':
-                # webtunnel格式：webtunnel [IP]:PORT FINGERPRINT url=... ver=...
-                parts = line.split(None, 3)  # 只分割前4部分
+                # webtunnel format: webtunnel [IP]:PORT FINGERPRINT url=... ver=...
+                parts = line.split(None, 3)  # Only split first 4 parts
                 if len(parts) >= 2:
                     ip_port = parts[1]
                     if ip_port.startswith('[') and ']:' in ip_port:
@@ -237,13 +237,13 @@ class TorBridgeAnalyzer:
         return None
     
     def load_bridge_ips_from_file(self, filepath, bridge_type):
-        """从单个文件加载网桥IP"""
+        """Load bridge IPs from single file"""
         bridges = []
         try:
             with open(filepath, 'r', encoding='utf-8', buffering=8192) as f:
                 for line in f:
                     line = line.strip()
-                    if line:  # 跳过空行
+                    if line:  # Skip empty lines
                         ip = self.parse_ip_from_bridge_line(line, bridge_type)
                         if ip:
                             bridges.append({
@@ -251,65 +251,65 @@ class TorBridgeAnalyzer:
                                 'type': bridge_type
                             })
         except Exception as e:
-            logger.error(f"读取文件失败 {filepath}: {e}")
+            logger.error(f"Failed to read file {filepath}: {e}")
         
         return bridges
     
     def load_bridge_ips(self):
-        """并行加载所有网桥IP地址"""
+        """Load all bridge IP addresses in parallel"""
         all_bridges = []
         
-        # 要处理的文件列表
+        # List of files to process
         file_tasks = []
         
-        # 处理文本文件
+        # Process text files
         for bridge_type in ['obfs4', 'obfs4-ipv6', 'vanilla', 'webtunnel']:
             filepath = self.bridges_dir / f"{bridge_type}.txt"
             if filepath.exists():
                 file_tasks.append((filepath, bridge_type))
         
-        # 处理解压后的snowflake文件
+        # Process extracted snowflake files
         for bridge_type in ['snowflake-ipv4', 'snowflake-ipv6']:
             filepath = self.bridges_dir / f"bridges-{bridge_type}"
             if filepath.exists():
                 file_tasks.append((filepath, bridge_type))
             else:
-                logger.warning(f"Snowflake文件不存在: {filepath}")
+                logger.warning(f"Snowflake file does not exist: {filepath}")
         
-        # 并行处理文件
-        logger.info(f"开始并行加载 {len(file_tasks)} 个文件...")
+        # Process files in parallel
+        logger.info(f"Starting parallel loading of {len(file_tasks)} files...")
         with ThreadPoolExecutor(max_workers=min(len(file_tasks), 4)) as executor:
             future_to_file = {
                 executor.submit(self.load_bridge_ips_from_file, filepath, bridge_type): (filepath, bridge_type)
                 for filepath, bridge_type in file_tasks
             }
             
-            with tqdm(total=len(file_tasks), desc="加载文件", unit="文件") as pbar:
+            with tqdm(total=len(file_tasks), desc="Loading files", unit="files") as pbar:
                 for future in as_completed(future_to_file):
                     filepath, bridge_type = future_to_file[future]
                     try:
                         bridges = future.result()
                         all_bridges.extend(bridges)
-                        logger.info(f"从 {filepath} 加载了 {len(bridges)} 个 {bridge_type} 网桥")
+                        logger.info(f"Loaded {len(bridges)} {bridge_type} bridges from {filepath}")
                     except Exception as e:
-                        logger.error(f"处理文件失败 {filepath}: {e}")
+                        logger.error(f"Failed to process file {filepath}: {e}")
                     pbar.update(1)
         
-        logger.info(f"总共加载了 {len(all_bridges)} 个网桥IP地址")
+        logger.info(f"Total loaded {len(all_bridges)} bridge IP addresses")
         
-        # 按类型统计
+        # Count by type
         type_counts = {}
         for bridge in all_bridges:
             bridge_type = bridge['type']
             type_counts[bridge_type] = type_counts.get(bridge_type, 0) + 1
         
         for bridge_type, count in type_counts.items():
-            logger.info(f"{bridge_type}: {count} 个网桥")
+            logger.info(f"{bridge_type}: {count} bridges")
         
         return all_bridges
     
     def get_ip_info_batch(self, ip_batch):
-        """批量获取IP信息"""
+        """Get IP information in batch"""
         results = []
         asn_reader, country_reader = self._get_mmdb_readers()
         
@@ -323,7 +323,7 @@ class TorBridgeAnalyzer:
             }
             
             try:
-                # 获取ASN信息
+                # Get ASN information
                 if asn_reader:
                     try:
                         response = asn_reader.asn(ip)
@@ -332,10 +332,10 @@ class TorBridgeAnalyzer:
                     except geoip2.errors.AddressNotFoundError:
                         pass
             except Exception as e:
-                logger.debug(f"获取ASN信息失败 {ip}: {e}")
+                logger.debug(f"Failed to get ASN info for {ip}: {e}")
             
             try:
-                # 获取国家信息
+                # Get country information
                 if country_reader:
                     try:
                         response = country_reader.country(ip)
@@ -344,41 +344,41 @@ class TorBridgeAnalyzer:
                     except geoip2.errors.AddressNotFoundError:
                         pass
             except Exception as e:
-                logger.debug(f"获取国家信息失败 {ip}: {e}")
+                logger.debug(f"Failed to get country info for {ip}: {e}")
             
             results.append(info)
         
         return results
     
     def analyze_bridges(self):
-        """并行分析所有网桥"""
+        """Analyze all bridges in parallel"""
         bridges = self.load_bridge_ips()
         
         if not bridges:
-            logger.warning("没有找到网桥数据")
+            logger.warning("No bridge data found")
             return []
         
-        logger.info("开始分析网桥信息...")
+        logger.info("Starting bridge analysis...")
         
-        # 检查MMDB文件是否可用
+        # Check if MMDB files are available
         asn_file = self._find_mmdb_file('asn')
         country_file = self._find_mmdb_file('country')
         
         if not asn_file and not country_file:
-            logger.error("未找到任何MMDB数据库文件！")
+            logger.error("No MMDB database files found!")
             return []
         
         if not asn_file:
-            logger.warning("未找到ASN数据库文件，将跳过ASN信息查询")
+            logger.warning("ASN database file not found, will skip ASN info lookup")
         
         if not country_file:
-            logger.warning("未找到Country数据库文件，将跳过国家信息查询")
+            logger.warning("Country database file not found, will skip country info lookup")
         
-        # 创建IP到类型的映射
+        # Create IP to type mapping
         ip_to_type = {bridge['ip']: bridge['type'] for bridge in bridges}
         unique_ips = list(ip_to_type.keys())
         
-        # 批量处理，每批处理100个IP
+        # Batch processing, 100 IPs per batch
         batch_size = 100
         ip_batches = [unique_ips[i:i + batch_size] for i in range(0, len(unique_ips), batch_size)]
         
@@ -390,33 +390,33 @@ class TorBridgeAnalyzer:
                 for batch in ip_batches
             }
             
-            with tqdm(total=len(unique_ips), desc="分析网桥", unit="个") as pbar:
+            with tqdm(total=len(unique_ips), desc="Analyzing bridges", unit="bridges") as pbar:
                 for future in as_completed(future_to_batch):
                     try:
                         batch_results = future.result()
                         for result in batch_results:
-                            # 添加网桥类型
+                            # Add bridge type
                             result['bridge_type'] = ip_to_type[result['ip']]
                             analyzed_bridges.append(result)
                         pbar.update(len(batch_results))
                     except Exception as e:
-                        logger.error(f"批量处理失败: {e}")
+                        logger.error(f"Batch processing failed: {e}")
                         pbar.update(len(future_to_batch[future]))
         
-        logger.info(f"完成分析 {len(analyzed_bridges)} 个网桥")
+        logger.info(f"Completed analysis of {len(analyzed_bridges)} bridges")
         return analyzed_bridges
     
     def filter_china_bridges(self, bridges):
-        """筛选中国的网桥"""
+        """Filter bridges in China"""
         china_bridges = [
             bridge for bridge in bridges 
             if bridge['country_code'] == 'CN'
         ]
-        logger.info(f"找到 {len(china_bridges)} 个中国网桥")
+        logger.info(f"Found {len(china_bridges)} bridges in China")
         return china_bridges
     
     def filter_specific_orgs(self, bridges):
-        """筛选包含特定组织的网桥"""
+        """Filter bridges with specific organizations"""
         target_orgs = ['alibaba', 'tencent', 'huawei']
         specific_bridges = []
         
@@ -426,64 +426,64 @@ class TorBridgeAnalyzer:
                 if any(org in as_org_lower for org in target_orgs):
                     specific_bridges.append(bridge)
         
-        logger.info(f"找到 {len(specific_bridges)} 个特定组织网桥")
+        logger.info(f"Found {len(specific_bridges)} bridges from specific organizations")
         return specific_bridges
     
     def save_json(self, data, filename):
-        """保存数据为JSON文件"""
+        """Save data to JSON file"""
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        logger.info(f"已保存 {len(data)} 条记录到 {filename}")
+        logger.info(f"Saved {len(data)} records to {filename}")
     
     def cleanup_mmdb_readers(self):
-        """清理MMDB readers"""
+        """Clean up MMDB readers"""
         if hasattr(self._local, 'asn_reader') and self._local.asn_reader:
             self._local.asn_reader.close()
         if hasattr(self._local, 'country_reader') and self._local.country_reader:
             self._local.country_reader.close()
     
     def run(self):
-        """运行主程序"""
-        logger.info("开始运行Tor网桥分析器")
+        """Run main program"""
+        logger.info("Starting Tor Bridge Analyzer")
         
         try:
-            # 创建目录
+            # Create directories
             self.create_directories()
             
-            # 下载文件
-            logger.info("下载MMDB文件...")
+            # Download files
+            logger.info("Downloading MMDB files...")
             self.download_mmdb_files()
             
-            logger.info("下载Bridges文件...")
+            logger.info("Downloading Bridges files...")
             self.download_bridge_files()
             
-            # 解压RAR文件
-            logger.info("解压RAR文件...")
+            # Extract RAR files
+            logger.info("Extracting RAR files...")
             self.extract_rar_files()
             
-            # 分析网桥
+            # Analyze bridges
             all_bridges = self.analyze_bridges()
             
             if not all_bridges:
-                logger.error("没有分析到任何网桥数据")
+                logger.error("No bridge data analyzed")
                 return
             
-            # 筛选数据
+            # Filter data
             china_bridges = self.filter_china_bridges(all_bridges)
             specific_org_bridges = self.filter_specific_orgs(all_bridges)
             
-            # 保存结果
+            # Save results
             self.save_json(all_bridges, 'all_tor_bridges.json')
             self.save_json(china_bridges, 'china_tor_bridges.json')
             self.save_json(specific_org_bridges, 'specific_org_tor_bridges.json')
             
-            logger.info("分析完成！")
-            logger.info(f"总网桥数: {len(all_bridges)}")
-            logger.info(f"中国网桥数: {len(china_bridges)}")
-            logger.info(f"特定组织网桥数: {len(specific_org_bridges)}")
+            logger.info("Analysis completed!")
+            logger.info(f"Total bridges: {len(all_bridges)}")
+            logger.info(f"China bridges: {len(china_bridges)}")
+            logger.info(f"Specific org bridges: {len(specific_org_bridges)}")
             
         finally:
-            # 清理资源
+            # Clean up resources
             self.cleanup_mmdb_readers()
 
 if __name__ == "__main__":

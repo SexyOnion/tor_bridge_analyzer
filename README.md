@@ -1,56 +1,58 @@
-# Tor网桥分析脚本
+# Tor Bridge Analysis Script
 
-## 关于
+[中文](https://github.com/SexyOnion/tor_bridge_analyzer/blob/main/README_CN.md)
 
-本项目始于仰止社区的一次讨论，我在这个帖子[“寻找中共运营的Tor网桥”](https://yangzhi.org/question/6783/)中初次构想了本脚本。
+## About
 
-我编写该脚本后发现有惊人数量的Tor网桥来自中国，具体数字是26483个中国网桥，这些网桥几乎一定都是中共设立的钓鱼网桥，很多IP可能都是防外线，而且有来自奇虎360公司的IP。相关数据在本项目的example目录中，文件均为json格式。
+This project originated from a discussion in the Yangzhi community, where I first conceived this script in the post ["Looking for Tor Bridges Operated by the CCP"](https://yangzhi.org/question/6783/).
 
-## 功能
+After writing this script, I discovered a staggering number of Tor bridges from China - specifically 26,483 Chinese bridges. These bridges are almost certainly honeypot bridges set up by the CCP, with many IPs likely being part of the Great Firewall infrastructure, including IPs from Qihoo 360 company. The relevant data is in the example directory of this project, with all files in JSON format.
 
-本项目包含一个Python脚本，运行这个脚本将会下载最新版本的GeoLite数据库，并且会下载最新获取到的Tor网桥列表。然后，脚本将会通过GeoLite数据库解析Tor网桥的ASN、国家等信息。
+## Features
 
-## 数据来源
+This project contains a Python script that, when run, will download the latest version of the GeoLite database and the most recently obtained Tor bridge list. The script will then parse the ASN, country, and other information of Tor bridges through the GeoLite database.
 
-MaxMind GeoLite2：https://github.com/P3TERX/GeoLite.mmdb/
+## Data Sources
 
-Tor-Bridges-Collector：https://github.com/scriptzteam/Tor-Bridges-Collector
+MaxMind GeoLite2: https://github.com/P3TERX/GeoLite.mmdb/
 
-## 使用教程
+Tor-Bridges-Collector: https://github.com/scriptzteam/Tor-Bridges-Collector
 
-1. 把这个Repo Clone到本地。
-2. cd进项目目录
-3. 创建虚拟环境: ```python3 -m venv myenv```
-4. 激活虚拟环境: WIndows系统执行:```myenv\Scripts\activate``` Mac/Linux执行:```source myenv/bin/activate```
-5. 安装依赖：```pip install -r requirements.txt```
-6. Linux系统执行以下命令安装unrar ```sudo apt install unrar``` MacOS系统执行：```brew install carlocab/personal/unrar``` 如果没有安装unrar会造成解压错误
-7. 在项目目录创建.env文件，按照你的需求修改：
+## Usage Tutorial
+
+1. Clone this repo to your local machine.
+2. cd into the project directory
+3. Create a virtual environment: ```python3 -m venv myenv```
+4. Activate the virtual environment: Windows: ```myenv\Scripts\activate``` Mac/Linux: ```source myenv/bin/activate```
+5. Install dependencies: ```pip install -r requirements.txt```
+6. For Linux systems, install unrar with: ```sudo apt install unrar``` For macOS: ```brew install carlocab/personal/unrar``` Not installing unrar will cause extraction errors
+7. Create a .env file in the project directory and modify according to your needs:
 
 ```env
-# 是否使用代理下载文件 (true/false)
-USE_PROXY=true
+# Whether to use proxy for downloading files (true/false)
+USE_PROXY=false
 
-# 代理URL (仅当USE_PROXY=true时生效)
-# 支持HTTP和SOCKS代理
-# 示例:
-# HTTP代理: http://127.0.0.1:8080
-# SOCKS5代理: socks5://127.0.0.1:1080
+# Proxy URL (only effective when USE_PROXY=true)
+# Supports HTTP and SOCKS proxy
+# Examples:
+# HTTP proxy: http://127.0.0.1:8080
+# SOCKS5 proxy: socks5://127.0.0.1:1080
 PROXY_URL=
 
-# 并发处理线程数 (建议1-20)
+# Number of concurrent processing threads (recommended 1-20)
 MAX_WORKERS=15
 
-# 其他可选配置
-# HTTP请求超时时间(秒)
+# Other optional configurations
+# HTTP request timeout in seconds
 REQUEST_TIMEOUT=30
 
-# 日志级别 (DEBUG, INFO, WARNING, ERROR)
+# Log level (DEBUG, INFO, WARNING, ERROR)
 LOG_LEVEL=INFO
 ```
-8. 运行```python tor_bridge_analyzer.py```
+8. Run ```python tor_bridge_analyzer.py```
 
-## 仓库镜像
+## Repository Mirrors
 
-仓库的主要地址在GitHub：https://github.com/SexyOnion/tor_bridge_analyzer
+The primary repository address is on GitHub: https://github.com/SexyOnion/tor_bridge_analyzer
 
-考虑到中国政府对GitHub的限制，以及GitHub平台自身对文件大小的限制，本仓库在Gitea有镜像：https://gitea.com/Xijinping/tor_bridge_analyzer
+Considering the Chinese government's restrictions on GitHub and GitHub's own file size limitations, this repository has a mirror on Gitea: https://gitea.com/Xijinping/tor_bridge_analyzer
