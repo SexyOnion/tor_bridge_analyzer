@@ -4,7 +4,7 @@
 
 ## Features
 
-This project contains a Python script that, when run, will download the latest version of the GeoLite database and the Tor bridge list. The script will then parse the ASN, country, and other information of Tor bridges through the GeoLite database.
+This project contains a Python script that, when run, will download GeoLite database and Tor bridge list. The script will then parse the ASN, country, and other information of Tor bridges through the GeoLite database.
 
 ## Data Sources
 
