@@ -2,12 +2,6 @@
 
 [中文](https://github.com/SexyOnion/tor_bridge_analyzer/blob/main/README_CN.md)
 
-## About
-
-This project originated from a discussion in the Yangzhi community, where I first conceived this script in the post ["Looking for Tor Bridges Operated by the CCP"](https://yangzhi.org/question/6783/).
-
-After writing this script, I discovered a staggering number of Tor bridges from China - specifically 26,483 Chinese bridges. These bridges are almost certainly honeypot bridges set up by the CCP. The relevant data is in the example directory of this project, with all files in JSON format.
-
 ## Features
 
 This project contains a Python script that, when run, will download the latest version of the GeoLite database and the most recently obtained Tor bridge list. The script will then parse the ASN, country, and other information of Tor bridges through the GeoLite database.
